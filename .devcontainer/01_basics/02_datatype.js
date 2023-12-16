@@ -4,20 +4,25 @@
 
 // Code readablity should be must high
 
-// Primitive Datatype
+// How data are written in memory and accessing data:
 
-let name="Sadiq";  // String
-let age= "24";    // Number  
-let isLoggedIn= true;  // Boolean
-let population= "10000000000"; // BigInt
-let country;   // undefined [not assigned]   // typeof null is undefined
-// null   standalone value [empty]      // typeof null is object
-// Symbol    unique
+// Primitive Datatype  (Call by a value)
 
-// Non-Primitive Datatype
+// Example                       value                type
 
-let obj =new Object;  // Object
+let name="Sadiq";               // String             string
+let age= "24";                  // Number             number
+let isLoggedIn= true;           // Boolean            boolean
+let population= "10000000000";  // BigInt             bigint
+let country;            // undefined [not assigned]   undefined
+// null   standalone value [empty]                    object
+// Symbol    unique                                   symbol
 
+// Non-Primitive Datatype (Call by a reference)
+
+let obj =new Object;  // Object             object
+let arr = new Array;  //Array               object
+let funct=function(){}  //function          function object
 // ======================================================================================
 
 // let score = "33abc";
@@ -64,6 +69,22 @@ let str1='Baig';
 // console.log('1'+'2');   12
 // console.log(+true);        1
 // console.log(+"");       0
+
+
+// ===============================================Memory================================
+
+// Stack and Heap Memory:
+
+// Stack (Step by Step) => Primitive (Gives a copy)
+let user='Sadiq';
+let user1 = user;
+user1='Baig'
+
+console.log(user);
+console.log(user1);
+
+// Heap (Whole) => Non-Primitive (Gives a reference)
+
 
 
 
