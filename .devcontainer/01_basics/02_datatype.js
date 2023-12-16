@@ -85,6 +85,14 @@ console.log(user1);
 
 // Heap (Whole) => Non-Primitive (Gives a reference)
 
+let u ={
+    name:'Sadiq',
+    roll_no: 23
+}
+let u1=u;
+u1.name='Baig';
 
+console.log(u1.name);
+console.log(u.name);
 
 
