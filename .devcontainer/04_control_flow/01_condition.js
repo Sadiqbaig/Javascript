@@ -54,3 +54,20 @@ if (userLoggedIn && debitCard ){
 if(loggedInFromGoggle || loggedInFromEmail){
     console.log("You can log in");
 }
+
+// Nullish coalescing Operator (??): null / undefined
+
+let val1;
+// val1 = 5 ?? 10               //5
+// val1 = null ?? 10            //10
+// val1 = undefined ?? 15          //15
+
+
+console.log(val1);
+
+// Ternary operator
+
+// condition ? true:false 
+
+const ice =100 
+ice< 100 ? console.log("ok"):console.log("not");
