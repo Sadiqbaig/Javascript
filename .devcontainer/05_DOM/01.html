@@ -4,11 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+    <!-- <script src="/ps.js"></script> -->
 </head>
-<body>
+<body class="bg-black">
     <div class="bg-black">
-        <h1 class="heading">Dom learning </h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, dolorem.</p>
+        <h1 id= "title" class="heading">DOM learning online <span style="display: none;"> Text text</span></h1>
+        <h1 id= "title" class="heading">DOM learning online <span style="display: none;"> Text text</span></h1>
+        <h1 id= "title" class="heading">DOM learning online <span style="display: none;"> Text text</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, dolore.</p>
+
+
+        <ul>
+            <li class="list-item">list1</li>
+            <li class="list-item">list2</li>
+            <li class="list-item">list3</li>
+            <li class="list-item">list4</li>
+        </ul>
     </div>
 </body>
 </html>
+
+<!-- We have done all thing in Browser for better understanding -->
+
+<!-- nodelist: mai ForEach use hoga -->
+<!-- HTML Collection :  Array.from(temp:htmlcollection ka var) -->
+
+
+<h3>​<span class=​"mw-headline" id=​"Creation_at_Netscape">​Creation at Netscape​</span>​</h3>​
+document.querySelectorAll('h2')
+NodeList(15) [h2.vector-pinnable-header-label, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2]
+const s =document.querySelectorAll('h3')
+undefined
+
+s.forEach((l)=>{
+    l.style.color ='red'
+})
+undefined
+const s =document.querySelectorAll('h3')
+undefined
+
+s[0].innerHTML
+'<span class="mw-headline" id="Creation_at_Netscape">Creation at Netscape</span>'
+
+s[0].innerText
+'Creation at Netscape'
+document.getElementsByClassName('mw-headline')
+HTMLCollection(74) [span#History.mw-headline, span#Creation_at_Netscape.mw-headline, span#Adoption_by_Microsoft.mw-headline, span#The_rise_of_JScript.mw-headline, span#Growth_and_standardization.mw-headline, span#Reaching_maturity.mw-headline, span#Trademark.mw-headline, span#Website_client-side_usage.mw-headline, span#Examples_of_scripted_behavior.mw-headline, span#Web_libraries_and_frameworks.mw-headline, span#jQuery.mw-headline, span#React.mw-headline, span#Angular.mw-headline, span#Vanilla_JS.mw-headline, span#Other_usage.mw-headline, span#Execution_system.mw-headline, span#Just-in-time_compilation.mw-headline, span#JavaScript_engine.mw-headline, span#Run-time_environment.mw-headline, span#Examples.mw-headline, span#Node.js.mw-headline, span#Deno.mw-headline, span#Features.mw-headline, span#Imperative_and_structured.mw-headline, span#Weakly_typed.mw-headline, span#Dynamic.mw-headline, span#Typing.mw-headline, span#Run-time_evaluation.mw-headline, span#Object-orientation_(prototype-based).mw-headline, span#Prototypes.mw-headline, span#Functions_as_object_constructors.mw-headline, span#Functions_as_methods.mw-headline, span#Functional.mw-headline, span#Lexical_closure.mw-headline, span#Anonymous_function.mw-headline, span#Delegative.mw-headline, span#Functions_as_roles_(Traits_and_Mixins).mw-headline, span#Object_composition_and_inheritance.mw-headline, span#Miscellaneous.mw-headline, span#Zero-based_numbering.mw-headline, span#Variadic_functions.mw-headline, span#Array_and_object_literals.mw-headline, span#Regular_expressions.mw-headline, span#Promises_and_Async/await.mw-headline, span#Promises.mw-headline, span#Async/await.mw-headline, span#Vendor-specific_extensions.mw-headline, span#Syntax.mw-headline, span#Simple_examples.mw-headline, span#More_advanced_example.mw-headline, span#Security.mw-headline, span#Cross-site_vulnerabilities.mw-headline, span#Cross-site_scripting.mw-headline, span#Cross-site_request_forgery.mw-headline, span#Misplaced_trust_in_the_client.mw-headline, span#Misplaced_trust_in_developers.mw-headline, span#Browser_and_plugin_coding_errors.mw-headline, span#Sandbox_implementation_errors.mw-headline, span#Hardware_vulnerabilities.mw-headline, span#Development_tools.mw-headline, span#Static_program_analysis.mw-headline, span#ESLint.mw-headline, span#JSLint.mw-headline, span#Related_technologies.mw-headline, span#Java.mw-headline, span#JSON.mw-headline, span#TypeScript.mw-headline, span#WebAssembly.mw-headline, span#Transpilers.mw-headline, span#Ajax.mw-headline, span#References.mw-headline, span#Sources.mw-headline, span#Further_reading.mw-headline, span#External_links.mw-headline, History: span#History.mw-headline, Creation_at_Netscape: span#Creation_at_Netscape.mw-headline, Adoption_by_Microsoft: span#Adoption_by_Microsoft.mw-headline, The_rise_of_JScript: span#The_rise_of_JScript.mw-headline, Growth_and_standardization: span#Growth_and_standardization.mw-headline, …]
+const a=document.getElementsByClassName('mw-headline')
+undefined
+Array.from(a)
+(74) [span#History.mw-headline, span#Creation_at_Netscape.mw-headline, span#Adoption_by_Microsoft.mw-headline, span#The_rise_of_JScript.mw-headline, span#Growth_and_standardization.mw-headline, span#Reaching_maturity.mw-headline, span#Trademark.mw-headline, span#Website_client-side_usage.mw-headline, span#Examples_of_scripted_behavior.mw-headline, span#Web_libraries_and_frameworks.mw-headline, span#jQuery.mw-headline, span#React.mw-headline, span#Angular.mw-headline, span#Vanilla_JS.mw-headline, span#Other_usage.mw-headline, span#Execution_system.mw-headline, span#Just-in-time_compilation.mw-headline, span#JavaScript_engine.mw-headline, span#Run-time_environment.mw-headline, span#Examples.mw-headline, span#Node.js.mw-headline, span#Deno.mw-headline, span#Features.mw-headline, span#Imperative_and_structured.mw-headline, span#Weakly_typed.mw-headline, span#Dynamic.mw-headline, span#Typing.mw-headline, span#Run-time_evaluation.mw-headline, span#Object-orientation_(prototype-based).mw-headline, span#Prototypes.mw-headline, span#Functions_as_object_constructors.mw-headline, span#Functions_as_methods.mw-headline, span#Functional.mw-headline, span#Lexical_closure.mw-headline, span#Anonymous_function.mw-headline, span#Delegative.mw-headline, span#Functions_as_roles_(Traits_and_Mixins).mw-headline, span#Object_composition_and_inheritance.mw-headline, span#Miscellaneous.mw-headline, span#Zero-based_numbering.mw-headline, span#Variadic_functions.mw-headline, span#Array_and_object_literals.mw-headline, span#Regular_expressions.mw-headline, span#Promises_and_Async/await.mw-headline, span#Promises.mw-headline, span#Async/await.mw-headline, span#Vendor-specific_extensions.mw-headline, span#Syntax.mw-headline, span#Simple_examples.mw-headline, span#More_advanced_example.mw-headline, span#Security.mw-headline, span#Cross-site_vulnerabilities.mw-headline, span#Cross-site_scripting.mw-headline, span#Cross-site_request_forgery.mw-headline, span#Misplaced_trust_in_the_client.mw-headline, span#Misplaced_trust_in_developers.mw-headline, span#Browser_and_plugin_coding_errors.mw-headline, span#Sandbox_implementation_errors.mw-headline, span#Hardware_vulnerabilities.mw-headline, span#Development_tools.mw-headline, span#Static_program_analysis.mw-headline, span#ESLint.mw-headline, span#JSLint.mw-headline, span#Related_technologies.mw-headline, span#Java.mw-headline, span#JSON.mw-headline, span#TypeScript.mw-headline, span#WebAssembly.mw-headline, span#Transpilers.mw-headline, span#Ajax.mw-headline, span#References.mw-headline, span#Sources.mw-headline, span#Further_reading.mw-headline, span#External_links.mw-headline]
+Array.from(a)[0]
+<span class=​"mw-headline" id=​"History">​History​</span>​
+Array.from(a)[0].innerText
+'History'
+
+document.querySelectorAll('.mw-headline')
+NodeList(74) [span#History.mw-headline, span#Creation_at_Netscape.mw-headline, span#Adoption_by_Microsoft.mw-headline, span#The_rise_of_JScript.mw-headline, span#Growth_and_standardization.mw-headline, span#Reaching_maturity.mw-headline, span#Trademark.mw-headline, span#Website_client-side_usage.mw-headline, span#Examples_of_scripted_behavior.mw-headline, span#Web_libraries_and_frameworks.mw-headline, span#jQuery.mw-headline, span#React.mw-headline, span#Angular.mw-headline, span#Vanilla_JS.mw-headline, span#Other_usage.mw-headline, span#Execution_system.mw-headline, span#Just-in-time_compilation.mw-headline, span#JavaScript_engine.mw-headline, span#Run-time_environment.mw-headline, span#Examples.mw-headline, span#Node.js.mw-headline, span#Deno.mw-headline, span#Features.mw-headline, span#Imperative_and_structured.mw-headline, span#Weakly_typed.mw-headline, span#Dynamic.mw-headline, span#Typing.mw-headline, span#Run-time_evaluation.mw-headline, span#Object-orientation_(prototype-based).mw-headline, span#Prototypes.mw-headline, span#Functions_as_object_constructors.mw-headline, span#Functions_as_methods.mw-headline, span#Functional.mw-headline, span#Lexical_closure.mw-headline, span#Anonymous_function.mw-headline, span#Delegative.mw-headline, span#Functions_as_roles_(Traits_and_Mixins).mw-headline, span#Object_composition_and_inheritance.mw-headline, span#Miscellaneous.mw-headline, span#Zero-based_numbering.mw-headline, span#Variadic_functions.mw-headline, span#Array_and_object_literals.mw-headline, span#Regular_expressions.mw-headline, span#Promises_and_Async/await.mw-headline, span#Promises.mw-headline, span#Async/await.mw-headline, span#Vendor-specific_extensions.mw-headline, span#Syntax.mw-headline, span#Simple_examples.mw-headline, span#More_advanced_example.mw-headline, span#Security.mw-headline, span#Cross-site_vulnerabilities.mw-headline, span#Cross-site_scripting.mw-headline, span#Cross-site_request_forgery.mw-headline, span#Misplaced_trust_in_the_client.mw-headline, span#Misplaced_trust_in_developers.mw-headline, span#Browser_and_plugin_coding_errors.mw-headline, span#Sandbox_implementation_errors.mw-headline, span#Hardware_vulnerabilities.mw-headline, span#Development_tools.mw-headline, span#Static_program_analysis.mw-headline, span#ESLint.mw-headline, span#JSLint.mw-headline, span#Related_technologies.mw-headline, span#Java.mw-headline, span#JSON.mw-headline, span#TypeScript.mw-headline, span#WebAssembly.mw-headline, span#Transpilers.mw-headline, span#Ajax.mw-headline, span#References.mw-headline, span#Sources.mw-headline, span#Further_reading.mw-headline, span#External_links.mw-headline]
+const b= document.querySelectorAll('.mw-headline')
+undefined
+b.forEach ((li)=>{
+    li
+})
+undefined
+b
+NodeList(74) [span#History.mw-headline, span#Creation_at_Netscape.mw-headline, span#Adoption_by_Microsoft.mw-headline, span#The_rise_of_JScript.mw-headline, span#Growth_and_standardization.mw-headline, span#Reaching_maturity.mw-headline, span#Trademark.mw-headline, span#Website_client-side_usage.mw-headline, span#Examples_of_scripted_behavior.mw-headline, span#Web_libraries_and_frameworks.mw-headline, span#jQuery.mw-headline, span#React.mw-headline, span#Angular.mw-headline, span#Vanilla_JS.mw-headline, span#Other_usage.mw-headline, span#Execution_system.mw-headline, span#Just-in-time_compilation.mw-headline, span#JavaScript_engine.mw-headline, span#Run-time_environment.mw-headline, span#Examples.mw-headline, span#Node.js.mw-headline, span#Deno.mw-headline, span#Features.mw-headline, span#Imperative_and_structured.mw-headline, span#Weakly_typed.mw-headline, span#Dynamic.mw-headline, span#Typing.mw-headline, span#Run-time_evaluation.mw-headline, span#Object-orientation_(prototype-based).mw-headline, span#Prototypes.mw-headline, span#Functions_as_object_constructors.mw-headline, span#Functions_as_methods.mw-headline, span#Functional.mw-headline, span#Lexical_closure.mw-headline, span#Anonymous_function.mw-headline, span#Delegative.mw-headline, span#Functions_as_roles_(Traits_and_Mixins).mw-headline, span#Object_composition_and_inheritance.mw-headline, span#Miscellaneous.mw-headline, span#Zero-based_numbering.mw-headline, span#Variadic_functions.mw-headline, span#Array_and_object_literals.mw-headline, span#Regular_expressions.mw-headline, span#Promises_and_Async/await.mw-headline, span#Promises.mw-headline, span#Async/await.mw-headline, span#Vendor-specific_extensions.mw-headline, span#Syntax.mw-headline, span#Simple_examples.mw-headline, span#More_advanced_example.mw-headline, span#Security.mw-headline, span#Cross-site_vulnerabilities.mw-headline, span#Cross-site_scripting.mw-headline, span#Cross-site_request_forgery.mw-headline, span#Misplaced_trust_in_the_client.mw-headline, span#Misplaced_trust_in_developers.mw-headline, span#Browser_and_plugin_coding_errors.mw-headline, span#Sandbox_implementation_errors.mw-headline, span#Hardware_vulnerabilities.mw-headline, span#Development_tools.mw-headline, span#Static_program_analysis.mw-headline, span#ESLint.mw-headline, span#JSLint.mw-headline, span#Related_technologies.mw-headline, span#Java.mw-headline, span#JSON.mw-headline, span#TypeScript.mw-headline, span#WebAssembly.mw-headline, span#Transpilers.mw-headline, span#Ajax.mw-headline, span#References.mw-headline, span#Sources.mw-headline, span#Further_reading.mw-headline, span#External_links.mw-headline]0: span#History.mw-headline1: span#Creation_at_Netscape.mw-headline2: span#Adoption_by_Microsoft.mw-headline3: span#The_rise_of_JScript.mw-headline4: span#Growth_and_standardization.mw-headline5: span#Reaching_maturity.mw-headline6: span#Trademark.mw-headline7: span#Website_client-side_usage.mw-headline8: span#Examples_of_scripted_behavior.mw-headline9: span#Web_libraries_and_frameworks.mw-headline10: span#jQuery.mw-headline11: span#React.mw-headline12: span#Angular.mw-headline13: span#Vanilla_JS.mw-headline14: span#Other_usage.mw-headline15: span#Execution_system.mw-headline16: span#Just-in-time_compilation.mw-headline17: span#JavaScript_engine.mw-headline18: span#Run-time_environment.mw-headline19: span#Examples.mw-headline20: span#Node.js.mw-headline21: span#Deno.mw-headline22: span#Features.mw-headline23: span#Imperative_and_structured.mw-headline24: span#Weakly_typed.mw-headline25: span#Dynamic.mw-headline26: span#Typing.mw-headline27: span#Run-time_evaluation.mw-headline28: span#Object-orientation_(prototype-based).mw-headline29: span#Prototypes.mw-headline30: span#Functions_as_object_constructors.mw-headline31: span#Functions_as_methods.mw-headline32: span#Functional.mw-headline33: span#Lexical_closure.mw-headline34: span#Anonymous_function.mw-headline35: span#Delegative.mw-headline36: span#Functions_as_roles_(Traits_and_Mixins).mw-headline37: span#Object_composition_and_inheritance.mw-headline38: span#Miscellaneous.mw-headline39: span#Zero-based_numbering.mw-headline40: span#Variadic_functions.mw-headline41: span#Array_and_object_literals.mw-headline42: span#Regular_expressions.mw-headline43: span#Promises_and_Async/await.mw-headline44: span#Promises.mw-headline45: span#Async/await.mw-headline46: span#Vendor-specific_extensions.mw-headline47: span#Syntax.mw-headline48: span#Simple_examples.mw-headline49: span#More_advanced_example.mw-headline50: span#Security.mw-headline51: span#Cross-site_vulnerabilities.mw-headline52: span#Cross-site_scripting.mw-headline53: span#Cross-site_request_forgery.mw-headline54: span#Misplaced_trust_in_the_client.mw-headline55: span#Misplaced_trust_in_developers.mw-headline56: span#Browser_and_plugin_coding_errors.mw-headline57: span#Sandbox_implementation_errors.mw-headline58: span#Hardware_vulnerabilities.mw-headline59: span#Development_tools.mw-headline60: span#Static_program_analysis.mw-headline61: span#ESLint.mw-headline62: span#JSLint.mw-headline63: span#Related_technologies.mw-headline64: span#Java.mw-headline65: span#JSON.mw-headline66: span#TypeScript.mw-headline67: span#WebAssembly.mw-headline68: span#Transpilers.mw-headline69: span#Ajax.mw-headline70: span#References.mw-headline71: span#Sources.mw-headline72: span#Further_reading.mw-headline73: span#External_links.mw-headlinelength: 74[[Prototype]]: NodeList
+const c=b.forEach ((li)=>{
+    li
+})
+undefined
+
+b[0].innerText
+'History'
+b.style.color='green'
+VM985:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+    at <anonymous>:1:14
+(anonymous) @ VM985:1
+b.forEach((h)=>{
+    h.style.color = 'red'
+})
+undefined
+b.forEach((h)=>{
+    h.style.color = 'red'
+})
+undefined
+b.forEach((h)=>{
+    h.style.color = 'red'
+    h.style.backgroundColor = 'green'
+})
