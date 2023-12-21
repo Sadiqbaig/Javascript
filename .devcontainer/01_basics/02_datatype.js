@@ -11,7 +11,7 @@
 // Example                       value                type
 
 let name="Sadiq";               // String             string
-let age= "24";                  // Number             number
+let age= 24;                  // Number             number
 let isLoggedIn= true;           // Boolean            boolean
 let population= "10000000000";  // BigInt             bigint
 let country;            // undefined [not assigned]   undefined
@@ -75,15 +75,15 @@ let str1='Baig';
 
 // Stack and Heap Memory:
 
-// Stack (Step by Step) => Primitive (Gives a copy)
+// Stack (Step by Step) => Primitive (Gives a copy) differ in output
 let user='Sadiq';
 let user1 = user;
 user1='Baig'
 
-console.log(user);
-console.log(user1);
+console.log(user);                  //Sadiq
+console.log(user1);                 //Baig
 
-// Heap (Whole) => Non-Primitive (Gives a reference)
+// Heap (Whole) => Non-Primitive (Gives a reference)  same value in output
 
 let u ={
     name:'Sadiq',
@@ -92,7 +92,7 @@ let u ={
 let u1=u;
 u1.name='Baig';
 
-console.log(u1.name);
-console.log(u.name);
+console.log(u1.name);               //Baig
+console.log(u.name);                //Baig
 
 
