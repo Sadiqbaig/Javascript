@@ -1,0 +1,48 @@
+
+< !DOCTYPE html >
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>DOM Final</title>
+                </head>
+                <body style="background-color: #212; color: #ddd;" >
+                    <ul class="language">
+                        <li>Javascript</li>
+                    </ul>
+                </body>
+                <script>
+                    function addLang(langName){
+                        let li = document.createElement('li');
+                    li.innerHTML = `${langName}`;
+                    document.querySelector('.language').append(li)
+    }
+
+                    addLang('Python');
+                    addLang('ReactJs');
+
+                    function addOptiLang(langName){
+                        let li = document.createElement('li');
+                    li.appendChild(document.createTextNode(langName));
+                    document.querySelector('.language').append(li)
+    }
+
+                    addOptiLang('Java');
+                    addOptiLang('C');
+
+                    //Edit: (Never use innerHTML not good for optimization)
+                    let secondLang = document.querySelector('li:nth-child(2)');
+                    const newLi = document.createElement('li');
+                    newLi.textContent = 'Rust';
+                    secondLang.replaceWith(newLi);
+
+                    let firstLang = document.querySelector('li:first-child');
+                    let firstNewLi = document.createElement('li');
+                    firstNewLi.innerHTML = 'Swift';
+                    firstLang.replaceWith(firstNewLi);
+
+                    // Remove 
+                    let lastLang = document.querySelector('li:last-child');
+                    lastLang.remove();
+                </script>
+</html>
